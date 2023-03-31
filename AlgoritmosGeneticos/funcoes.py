@@ -38,6 +38,16 @@ def gene_letra(letras):
     letra = random.choice(letras)
     return letra
 
+def gene_letra_vr(letras):
+    """Sorteia uma letra.
+    Args:
+      letras: letras possíveis de serem sorteadas.
+    Return:
+      Retorna uma letra dentro das possíveis de serem sorteadas.
+    """
+    letra = random.choice(letras)
+    return letra
+
 
 ###############################################################################
 #                                  Indivíduos                                 #
@@ -91,6 +101,24 @@ def individuo_senha(tamanho_senha, letras):
     return candidato
 
 
+def individuo_senha_vr(tamanho_senha_max, letras):
+    """Cria um candidato para o problema da senha
+    Args:
+      tamanho_senha_max: inteiro representando o tamanho máximo da senha.
+      letras: letras possíveis de serem sorteadas.
+    Return:
+      Lista com n letras
+    """
+
+    candidato = []
+    tamanho_senha = random.randint(1, tamanho_senha_max)
+    
+    for n in range(tamanho_senha):
+        candidato.append(gene_letra_vr(letras))
+
+    return candidato
+
+
 ###############################################################################
 #                                  População                                  #
 ###############################################################################
@@ -139,6 +167,21 @@ def populacao_inicial_senha(tamanho, tamanho_senha, letras):
     populacao = []
     for n in range(tamanho):
         populacao.append(individuo_senha(tamanho_senha, letras))
+    return populacao
+
+
+def populacao_inicial_senha_vr(tamanho, tamanho_senha, letras):
+    """Cria população inicial no problema da senha
+    Args
+      tamanho: tamanho da população.
+      tamanho_senha: inteiro representando o tamanho da senha.
+      letras: letras possíveis de serem sorteadas.
+    Returns:
+      Lista com todos os indivíduos da população no problema da senha.
+    """
+    populacao = []
+    for n in range(tamanho):
+        populacao.append(individuo_senha_vr(tamanho_senha, letras))
     return populacao
 
 
@@ -311,6 +354,30 @@ def funcao_objetivo_senha(individuo, senha_verdadeira):
     return diferenca
 
 
+def funcao_objetivo_senha_vr(individuo, senha_verdadeira, peso):
+    """Computa a funcao objetivo de um individuo no problema da senha
+    Args:
+      individiuo: lista contendo as letras da senha
+      senha_verdadeira: a senha que você está tentando descobrir
+    Returns:
+      A "distância" entre a senha proposta e a senha verdadeira. Essa distância
+      é medida letra por letra. Quanto mais distante uma letra for da que
+      deveria ser, maior é essa distância.
+      Peso: representa a penalidade de quão longe está a senha e a tentativa
+    """
+    
+    diferenca = 0
+
+    for letra_candidato, letra_oficial in zip(individuo, senha_verdadeira):
+        diferenca = diferenca + abs(ord(letra_candidato) - ord(letra_oficial))
+       
+    diferenca_tamanho = abs(len(individuo) - len(senha_verdadeira))
+    diferenca += diferenca_tamanho * peso
+    
+    return diferenca
+
+
+
 ###############################################################################
 #                         Função objetivo - população                         #
 ###############################################################################
@@ -356,5 +423,20 @@ def funcao_objetivo_pop_senha(populacao, senha_verdadeira):
 
     for individuo in populacao:
         resultado.append(funcao_objetivo_senha(individuo, senha_verdadeira))
+
+    return resultado
+
+def funcao_objetivo_pop_senha_vr(populacao, senha_verdadeira, peso):
+    """Computa a funcao objetivo de uma populaçao no problema da senha.
+    Args:
+      populacao: lista com todos os individuos da população
+      senha_verdadeira: a senha que você está tentando descobrir
+    Returns:
+      Lista contendo os valores da métrica de distância entre senhas.
+    """
+    resultado = []
+
+    for individuo in populacao:
+        resultado.append(funcao_objetivo_senha_vr(individuo, senha_verdadeira, peso))
 
     return resultado
