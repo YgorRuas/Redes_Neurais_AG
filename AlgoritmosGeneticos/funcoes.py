@@ -1,6 +1,12 @@
 import random
 
 ###############################################################################
+#                                 Observações                                 #
+##############################################################################+
+
+"Foi utilizado o Black para formatação dessa seção."
+
+###############################################################################
 #                                   Suporte                                   #
 ##############################################################################+
 
@@ -38,7 +44,6 @@ def cria_cidades(n):
 
     for i in range(n):
         cidades[f"Cidade {i}"] = (random.random(), random.random())
-
     return cidades
 
 
@@ -59,15 +64,14 @@ def computa_mochila(individuo, objetos, ordem_dos_nomes):
 
     valor_total = 0
     peso_total = 0
-    
+
     for pegou_o_item_ou_nao, nome_do_item in zip(individuo, ordem_dos_nomes):
         if pegou_o_item_ou_nao == 1:
             valor_do_item = objetos[nome_do_item]["valor"]
             peso_do_item = objetos[nome_do_item]["peso"]
-            
+
             valor_total = valor_total + valor_do_item
             peso_total = peso_total + peso_do_item
-        
     return valor_total, peso_total
 
 
@@ -107,6 +111,7 @@ def gene_letra(letras):
     """
     letra = random.choice(letras)
     return letra
+
 
 def gene_letra_vr(letras):
     """Sorteia uma letra.
@@ -167,7 +172,6 @@ def individuo_senha(tamanho_senha, letras):
 
     for n in range(tamanho_senha):
         candidato.append(gene_letra(letras))
-
     return candidato
 
 
@@ -182,10 +186,9 @@ def individuo_senha_vr(tamanho_senha_max, letras):
 
     candidato = []
     tamanho_senha = random.randint(3, tamanho_senha_max)
-    
+
     for n in range(tamanho_senha):
         candidato.append(gene_letra_vr(letras))
-
     return candidato
 
 
@@ -202,6 +205,7 @@ def individuo_cv(cidades):
     nomes = list(cidades.keys())
     random.shuffle(nomes)
     return nomes
+
 
 ###############################################################################
 #                                  População                                  #
@@ -301,9 +305,7 @@ def selecao_roleta_max(populacao, fitness):
     Returns:
       População dos indivíduos selecionados.
     """
-    populacao_selecionada = random.choices(
-        populacao, weights=fitness, k=len(populacao)
-    )
+    populacao_selecionada = random.choices(populacao, weights=fitness, k=len(populacao))
     return populacao_selecionada
 
 
@@ -339,10 +341,9 @@ def selecao_torneio_min(populacao, fitness, tamanho_torneio=3):
             if fit < minimo_fitness:
                 selecionado = individuo
                 minimo_fitness = fit
-
         selecionados.append(selecionado)
-
     return selecionados
+
 
 def selecao_torneio_min_vr(populacao, fitness, tamanho_torneio=3):
     """Faz a seleção de uma população usando torneio.
@@ -376,9 +377,7 @@ def selecao_torneio_min_vr(populacao, fitness, tamanho_torneio=3):
             if fit < minimo_fitness:
                 selecionado = individuo
                 minimo_fitness = fit
-
         selecionados.append(selecionado)
-
     return selecionados
 
 
@@ -403,6 +402,7 @@ def cruzamento_ponto_simples(pai, mae):
 
     return filho1, filho2
 
+
 def cruzamento_ponto_simples_vr(pai, mae):
     """Operador de cruzamento de ponto simples.
     Args:
@@ -416,7 +416,6 @@ def cruzamento_ponto_simples_vr(pai, mae):
         ponto_de_corte = random.randint(1, len(pai) - 1)
     else:
         ponto_de_corte = random.randint(1, len(mae) - 1)
-
     filho1 = pai[:ponto_de_corte] + mae[ponto_de_corte:]
     filho2 = mae[:ponto_de_corte] + pai[ponto_de_corte:]
 
@@ -440,20 +439,16 @@ def cruzamento_ordenado(pai, mae):
     """
     corte1 = random.randint(0, len(pai) - 2)
     corte2 = random.randint(corte1 + 1, len(pai) - 1)
-    
+
     filho1 = pai[corte1:corte2]
     for gene in mae:
         if gene not in filho1:
             filho1.append(gene)
-            
     filho2 = mae[corte1:corte2]
     for gene in pai:
         if gene not in filho2:
             filho2.append(gene)
-        
     return filho1, filho2
-            
-            
 
 
 ###############################################################################
@@ -501,6 +496,7 @@ def mutacao_senha(individuo, letras):
     individuo[gene] = gene_letra(letras)
     return individuo
 
+
 def mutacao_senha_vr(individuo, letras, tamanho_max):
     """Realiza a mutação de um gene no problema da senha.
     Args:
@@ -522,8 +518,8 @@ def mutacao_senha_vr(individuo, letras, tamanho_max):
             for _ in range(novo_tamanho - len(individuo)):
                 individuo.append(gene_letra_vr(letras))
             return individuo
-        
-        
+
+
 def mutacao_de_troca(individuo):
     """Troca o valor de dois genes.
     Args:
@@ -534,14 +530,13 @@ def mutacao_de_troca(individuo):
     """
     indices = list(range(len(individuo)))
     lista_sorteada = random.sample(indices, k=2)
-    
+
     indice1 = lista_sorteada[0]
     indice2 = lista_sorteada[1]
-    
+
     individuo[indice1], individuo[indice2] = individuo[indice2], individuo[indice1]
-    
+
     return individuo
-    
 
 
 ###############################################################################
@@ -583,7 +578,6 @@ def funcao_objetivo_senha(individuo, senha_verdadeira):
 
     for letra_candidato, letra_oficial in zip(individuo, senha_verdadeira):
         diferenca = diferenca + abs(ord(letra_candidato) - ord(letra_oficial))
-
     return diferenca
 
 
@@ -598,15 +592,14 @@ def funcao_objetivo_senha_vr(individuo, senha_verdadeira, peso):
       deveria ser, maior é essa distância.
       Peso: representa a penalidade de quão longe está a senha e a tentativa
     """
-    
+
     diferenca = 0
 
     for letra_candidato, letra_oficial in zip(individuo, senha_verdadeira):
         diferenca = diferenca + abs(ord(letra_candidato) - ord(letra_oficial))
-       
     diferenca_tamanho = abs(len(individuo) - len(senha_verdadeira))
     diferenca += diferenca_tamanho * peso
-    
+
     return diferenca
 
 
@@ -626,17 +619,16 @@ def funcao_objetivo_cv(individuo, cidades):
 
     distancia = 0
 
-    for posicao in range(len(individuo) -1):
+    for posicao in range(len(individuo) - 1):
         partida = cidades[individuo[posicao]]
         chegada = cidades[individuo[posicao + 1]]
-        
+
         percurso = distancia_entre_dois_pontos(partida, chegada)
         distancia = distancia + percurso
-        
     # Calculando o caminho de volta para a cidade inicial
     partida = cidades[individuo[-1]]
     chegada = cidades[individuo[0]]
-    
+
     percurso = distancia_entre_dois_pontos(partida, chegada)
     distancia = distancia + percurso
 
@@ -665,7 +657,6 @@ def funcao_objetivo_mochila(individuo, objetos, limite, ordem_dos_nomes):
         return 0.01
     else:
         return valor_mochila
-
 
 
 ###############################################################################
@@ -713,8 +704,8 @@ def funcao_objetivo_pop_senha(populacao, senha_verdadeira):
 
     for individuo in populacao:
         resultado.append(funcao_objetivo_senha(individuo, senha_verdadeira))
-
     return resultado
+
 
 def funcao_objetivo_pop_senha_vr(populacao, senha_verdadeira, peso):
     """Computa a funcao objetivo de uma populaçao no problema da senha.
@@ -728,9 +719,7 @@ def funcao_objetivo_pop_senha_vr(populacao, senha_verdadeira, peso):
 
     for individuo in populacao:
         resultado.append(funcao_objetivo_senha_vr(individuo, senha_verdadeira, peso))
-
     return resultado
-
 
 
 def funcao_objetivo_pop_cv(populacao, cidades):
@@ -749,9 +738,7 @@ def funcao_objetivo_pop_cv(populacao, cidades):
     resultado = []
     for individuo in populacao:
         resultado.append(funcao_objetivo_cv(individuo, cidades))
-
     return resultado
-
 
 
 def funcao_objetivo_pop_mochila(populacao, objetos, limite, ordem_dos_nomes):
@@ -773,9 +760,6 @@ def funcao_objetivo_pop_mochila(populacao, objetos, limite, ordem_dos_nomes):
     resultado = []
     for individuo in populacao:
         resultado.append(
-            funcao_objetivo_mochila(
-                individuo, objetos, limite, ordem_dos_nomes
-            )
+            funcao_objetivo_mochila(individuo, objetos, limite, ordem_dos_nomes)
         )
-
     return resultado
