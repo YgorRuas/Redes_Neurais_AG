@@ -15,3 +15,6 @@ Além disso, temos a seção de `RedesNeurais`, esta que ainda está em constru�
 ## Objetivo de cada Conteúdo
 
 De forma simplificada, temos a seguinte imagem que traz o objetivo e algumas diferenças entre Algoritmos Genéticos e Redes Neurais:
+
+
+![image](https://user-images.githubusercontent.com/106711102/235772974-f345ca8a-8abd-4a8a-8303-006fe4192953.png)
