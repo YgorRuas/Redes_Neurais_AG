@@ -1,4 +1,5 @@
 import random
+from collections import deque
 
 ###############################################################################
 #                                 Observações                                 #
@@ -207,6 +208,7 @@ def individuo_cv(cidades):
     return nomes
 
 
+
 ###############################################################################
 #                                  População                                  #
 ###############################################################################
@@ -377,6 +379,35 @@ def selecao_torneio_min_vr(populacao, fitness, tamanho_torneio=3):
             if fit < minimo_fitness:
                 selecionado = individuo
                 minimo_fitness = fit
+        selecionados.append(selecionado)
+    return selecionados
+
+
+def selecao_torneio_max(populacao, fitness, tamanho_torneio):
+    """Faz a seleção de uma população usando torneio.
+    Nota: da forma que está implementada, só funciona em problemas de maximização.
+    Args:
+        populacao: população do problema;
+        fitness: lista com os valores de fitness de cada individuo;
+        tamanho_torneio: quantidade de invidiuos que batalham entre si.
+
+    Returns:
+        Individuos selecionados. Lista com os individuos selecionados com mesmo tamanho do argumento 'populacao'.
+    """
+    selecionados = []
+
+    par_populacao_fitness = list(zip(populacao, fitness))
+
+    for _ in range(len(populacao)):
+        combatentes = random.sample(par_populacao_fitness, tamanho_torneio)
+
+        melhor_fit = -float('inf')
+
+        for individuo, fit in combatentes:
+            if fit > melhor_fit:
+                selecionado = individuo
+                melhor_fit = fit
+        
         selecionados.append(selecionado)
     return selecionados
 
@@ -657,6 +688,34 @@ def funcao_objetivo_mochila(individuo, objetos, limite, ordem_dos_nomes):
         return 0.01
     else:
         return valor_mochila
+    
+    
+def funcao_objetivo_cv_gasolina_inf(individuo, cidades):
+    """Computa a funcao objetivo de um individuo no problema do caixeiro viajante com gasolina infinita.
+    Args:
+      individiuo:
+        Lista contendo a ordem das cidades que serão visitadas
+      cidades:
+        Dicionário onde as chaves são os nomes das cidades e os valores são as
+        coordenadas das cidades.
+    Returns:
+      A distância percorrida pelo caixeiro seguindo o caminho contido no
+      `individuo`. Lembrando que após percorrer todas as cidades em ordem, o
+      caixeiro retorna para a cidade original de onde começou sua viagem.
+    """
+
+    distancia = 0
+
+    individuo_copy = deque(individuo)
+    individuo_copy.rotate(-1)
+
+    for ini, che in zip(individuo, individuo_copy):
+        inicio = cidades[ini]
+        chegada = cidades[che]
+
+        distancia += distancia_entre_dois_pontos(inicio, chegada)
+    
+    return distancia
 
 
 ###############################################################################
@@ -763,3 +822,5 @@ def funcao_objetivo_pop_mochila(populacao, objetos, limite, ordem_dos_nomes):
             funcao_objetivo_mochila(individuo, objetos, limite, ordem_dos_nomes)
         )
     return resultado
+
+
