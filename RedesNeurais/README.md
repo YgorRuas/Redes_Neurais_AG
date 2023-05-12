@@ -20,7 +20,7 @@ Imagem gerada pelo Graphviz Online, para plotar a rede neural criada no experime
 
 ### R.04 - Computando Gradientes Locais
 
-
+O presente desafio, foca na implementação de gradientes locais e do cálculo de backpropagation para a classe usada no experimento anterior, onde, buscamos uma otimização e automatização do processo, portanto, usamos métodos como o `propagar` e algoritmos de `autograd`, resultando em uma classe capaz de criar um grafo a e executar o `backpropagation`, sem apresentar problemas matemáticos ou erro em algum dos vértices, para a rede representada pelo grafo.
 
 ## Contribuições
 
