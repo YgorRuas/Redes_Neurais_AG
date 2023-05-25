@@ -22,6 +22,15 @@ Imagem gerada pelo Graphviz Online, para plotar a rede neural criada no experime
 
 O presente desafio, foca na implementação de gradientes locais e do cálculo de backpropagation para a classe usada no experimento anterior, onde, buscamos uma otimização e automatização do processo, portanto, usamos métodos como o `propagar` e algoritmos de `autograd`, resultando em uma classe capaz de criar um grafo a e executar o `backpropagation`, sem apresentar problemas matemáticos ou erro em algum dos vértices, para a rede representada pelo grafo.
 
+### R.05 - Finalizando a Classe Valor
+
+Esse experimento, por meio das classes, apresenta algumas operações necessárias para que seja usada em redes neurais artificiais. Assim é introduzido a classe `Valor`  a qual é uma implementação que representa valores numéricos e permite operações como adição, multiplicação, exponenciação, divisão e as mesmas em ordem invertida, além de conseguir a aplicação da função sigmoide. Assim, são importantes pois muitas operações matemáticas são realizadas nessas redes, como soma ponderada, multiplicação por pesos, cálculos de ativação e propagação de gradientes. Portanto, ao implementar a classe `Valor` com essas funcionalidades, torna-se possível utilizá-la como base para construir uma rede neural artificial mais completa.
+
+### R.06 - Redes Neurais Artificiais
+
+O notebbok referente a **Redes Neurais Artificiais**, nos apresenta a como criar uma rede neural artificial usando Python. Dessa maneira, construindo uma rede neural multicamadas de forma que seja possível criar uma rede que seja capaz de processar informações e realizar operações com base em sinapses artificiais ponderadas, somas, propagação dos dados entre outros que foi determinado na classe `Valor` e criado no **experimento R.04**, mas também disponível no arquivo `classes.py`. Além disso, é introduzida a ideia de uma camada de neurônios e também é apresentado o conceito de Multilayer Perceptron (MLP).
+
+
 ## Contribuições
 
 <p align="justify"> O presente git possuí como único autor [Ygor Ruas](https://github.com/YgorRuas/Redes_Neuro_Anais/tree/main), contudo, o arquivo advem da disciplina de Redes Neurais e Algoritmos Geneticos do Professor [Cassar. Daniel](https://github.com/drcassar/template_rnag), onde foI realizado uma ramificação para o desenvolvimento desse git. Além disso, como contribuições temos os alunos da primeira turma da ilum, estes que ajudaram de forma coletiva em parte da montagem e estruturação dos códigos. </p>
