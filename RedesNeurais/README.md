@@ -30,6 +30,13 @@ Esse experimento, por meio das classes, apresenta algumas operações necessári
 
 O notebbok referente a **Redes Neurais Artificiais**, nos apresenta a como criar uma rede neural artificial usando Python. Dessa maneira, construindo uma rede neural multicamadas de forma que seja possível criar uma rede que seja capaz de processar informações e realizar operações com base em sinapses artificiais ponderadas, somas, propagação dos dados entre outros que foi determinado na classe `Valor` e criado no **experimento R.04**, mas também disponível no arquivo `classes.py`. Além disso, é introduzida a ideia de uma camada de neurônios e também é apresentado o conceito de Multilayer Perceptron (MLP).
 
+### R.07 - Treinando uma rede neural
+
+A respeito desse desafio o principal objetivo desse notebook é treinar uma rede neural artificial tipo Multilayer Perceptron usando Python. Assim, é apresentado um exemplo de treinamento de uma rede neural artificial tipo Multilayer Perceptron (MLP) usando Python puro, este que descreve a criação das classes necessárias para construir a rede neural, incluindo a classe Neuronio, a classe Camada e a classe MLP, além de importar a classe qeu foi crida e usada nos materias anteriores `Valor`. Além disso foi intoduzido a função de perda `loss function`, esta que calcula a soma dos erros quadráticos entre as previsões e os valores verdadeiros.
+
+### R.08 - Treinando uma rede neural usando pytorch
+
+Em sequêmcia ao notebook anterior (**experimento R.07**), esse possúi o objetivo de treinar uma rede neural artificial tipo Multilayer Perceptron usando pytorch. Assim, é ressaltado os motivos para utilizar PyTorch, como sua otimização eficiente, ampla variedade de funcionalidades prontas para uso, suporte ao treinamento em GPUs e sua relevância tanto na academia quanto no mundo corporativo, sendo bem mais eficiente do que a rede neural que foi criada no decorrer do semestre. Portanto, através do exemplo apresentado (dos diamantes), é possível compreender as etapas envolvidas no treinamento de uma rede neural, desde a preparação dos dados até a avaliação do modelo, que foi feito um treinamento e depois o teste, evidenciando a eficacia desse método e da biblioteca pytorch.
 
 ## Contribuições
 
