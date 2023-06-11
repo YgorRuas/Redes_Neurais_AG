@@ -22,11 +22,17 @@ __<summary>Algoritmos Genéticos :dna:</summary>__
 
 ## Principais arquivos
 
-Até o devido momento, o principal caminho a se tomar é visitar a pasta de `AlgoritmosGeneticos`.
+Os principais caminho a se tomar é visitar a pasta de `AlgoritmosGeneticos` e a pasta `RedesNeurais`.
 
-<p align="justify"> Assim, encontrando a implementações dos Algoritmos Genéticos, apresentando exemplos e conclusões para os mesmos. Desse modo, resolvendo problemas de otimização e trazendo conceitos necessários para o entendimento. </p>
+<p align="justify"> Assim, encontrando a implementações dos Algoritmos Genéticos, apresentando exemplos e conclusões para os mesmos. Desse modo, resolvendo problemas de otimização e trazendo conceitos necessários para o entendimento. Já em Redes Neurais, sendo apresentado desde o funcionamento das classes até o desenvolvimento de uma Rede Neural completa, com todos os passos sendo descritos. Além disso, tem-se uma introdução ao Pytorch </p>
 
-Além disso, temos a seção de `RedesNeurais`, esta que ainda está em construção. 
+Desse modo, as seguintes pastas compõem esse repositório:
+- [AlgoritmosGeneticos](https://github.com/YgorRuas/Redes_Neuro_Anais/tree/main/AlgoritmosGeneticos): Contém os experimentos de Algoritmos Genéticos
+- [RedesNeurais](https://github.com/YgorRuas/Redes_Neuro_Anais/tree/main/RedesNeurais): Contém os experimentos de Redes Neurais
+- [.gitignore](https://github.com/YgorRuas/Redes_Neuro_Anais/blob/main/.gitignore): Contém arquivos ignorados
+- [LICENSE](https://github.com/YgorRuas/Redes_Neuro_Anais/blob/main/LICENSE): Apresenta a licença usada no repositório
+- [README.md](https://github.com/YgorRuas/Redes_Neuro_Anais/blob/main/README.md): Guia para o repositório
+- [experimento_template.ipynb](https://github.com/YgorRuas/Redes_Neuro_Anais/blob/main/experimento_template.ipynb): Template que cada experimento deve seguir
 
 ## Objetivo de cada Conteúdo
 
@@ -34,5 +40,15 @@ De forma simplificada, temos a seguinte imagem que traz o objetivo e algumas dif
 
 
 ![image](https://user-images.githubusercontent.com/106711102/235772974-f345ca8a-8abd-4a8a-8303-006fe4192953.png)
+
+## Referências
+[1]: What are Neural Networks? | IBM. Disponível em: https://www.ibm.com/topics/neural-networks.
+
+
+[2]: WIRSANSKY, E. Hands-On Genetic Algorithms with Python: Applying genetic algorithms to solve real-world deep learning and artificial intelligence problems. [s.l.]: Packt Publishing, 2020.
+
+<h4 align="center"> 
+    :construction:  Projeto em construção  :construction:
+</h4>
 
 
