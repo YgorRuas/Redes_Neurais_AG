@@ -1,4 +1,6 @@
-# Redes Neurais e Algoritmos Genéticos
+<h1 align="center"> Redes Neurais e Algoritmos Genéticos </h1>
+
+![LICENSE](https://img.shields.io/badge/LICENSE-GNU%20General%20Public%20License%20v3.0-blue)
 
 ## Bem-vindo!
 
