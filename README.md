@@ -4,20 +4,20 @@
 
 ## Bem-vindo!
 
-<p align="justify"> Este repositório de GitHub é dedicado para a disciplina de Redes Neurais e Algoritmos Genéticos do 3° semestre do Bacharelado em Ciência e Tecnologia da Ilum Escola de Ciência, faculdade parte do Centro Nacional de Pesquisa em Energia e Materiais (CNPEM), ministrada pelo Profº Daniel Cassar. O projeto ainda está em desenvolvimento e alterações são constantes nos arquivos.  </p>
+<p align="justify"> Este repositório de GitHub é dedicado para a disciplina de Redes Neurais e Algoritmos Genéticos do 3° semestre do Bacharelado em Ciência e Tecnologia da Ilum Escola de Ciência, faculdade parte do Centro Nacional de Pesquisa em Energia e Materiais (CNPEM), ministrada pelo Profº Daniel Cassar. O projeto ainda está em desenvolvimento e alterações são constantes nos arquivos. Desse modo, abaixo temos uma explicação conceitual do que será abordado nesse repositório.</p>
 
 <details>
     
 __<summary>Redes Neurais :brain:</summary>__
     
-São estruturas inspiradas no cérebro humano, imitando a maneira como os neurônios biológicos sinalizam uns aos outros. As redes neurais são compostas por camadas de nós, contendo uma camada de entrada, uma ou mais camadas ocultas e uma camada de saída. Cada nó, ou neurônio artificial, se conecta a outro e tem um peso e limite associados. Se a saída de qualquer nó individual estiver acima do valor limite especificado, esse nó é ativado, enviando dados para a próxima camada da rede. Caso contrário, nenhum dado é repassado para a próxima camada da rede. As redes neurais dependem de dados de treinamento para aprender e melhorar sua precisão ao longo do tempo. No entanto, uma vez que esses algoritmos de aprendizado são ajustados para precisão, eles são ferramentas poderosas em ciência da computação e inteligência artificial, permitindo classificar e agrupar dados em alta velocidade.
+<p align="justify"> São estruturas inspiradas no cérebro humano, imitando a maneira como os neurônios biológicos sinalizam uns aos outros. As redes neurais são compostas por camadas de nós, contendo uma camada de entrada, uma ou mais camadas ocultas e uma camada de saída. Cada nó, ou neurônio artificial, se conecta a outro e tem um peso e limite associados. Se a saída de qualquer nó individual estiver acima do valor limite especificado, esse nó é ativado, enviando dados para a próxima camada da rede. Caso contrário, nenhum dado é repassado para a próxima camada da rede. As redes neurais dependem de dados de treinamento para aprender e melhorar sua precisão ao longo do tempo. No entanto, uma vez que esses algoritmos de aprendizado são ajustados para precisão, eles são ferramentas poderosas em ciência da computação e inteligência artificial, permitindo classificar e agrupar dados em alta velocidade. </p>
 </details>
 
 <details>
 
 __<summary>Algoritmos Genéticos :dna:</summary>__
     
-Os algoritmos genéticos são uma família de algoritmos de busca inspirados nos princípios da evolução da natureza. Ao simular o processo de seleção natural e reprodução, eles são capazes de gerar soluções de alta qualidade para diversos problemas relacionados à busca, otimização e aprendizado. A sua analogia com a evolução natural permite que os algoritmos genéticos superem os desafios encontrados pelos algoritmos de busca e otimização convencionais, principalmente em problemas com uma grande quantidade de parâmetros e representações matemáticas complexas.
+<p align="justify"> Os algoritmos genéticos são uma família de algoritmos de busca inspirados nos princípios da evolução da natureza. Ao simular o processo de seleção natural e reprodução, eles são capazes de gerar soluções de alta qualidade para diversos problemas relacionados à busca, otimização e aprendizado. A sua analogia com a evolução natural permite que os algoritmos genéticos superem os desafios encontrados pelos algoritmos de busca e otimização convencionais, principalmente em problemas com uma grande quantidade de parâmetros e representações matemáticas complexas.</p>
 </details>
 
 ## Principais arquivos
