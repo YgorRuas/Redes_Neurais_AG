@@ -20,6 +20,9 @@
 <img src='./MemeAG.png' style="width:900px;height:400px"/>
 </center>
 
+<h1 align="center"> <img src="MemeAG.png" style="width:530px;height:220px"/> 
+</h1>
+
 ## Instruções e especificações
 <p align="justify"> Os Algoritmos Genéticos sempre buscam uma otimização ou por meio de uma minimização ou por meio de uma maximização de uma função local. Assim, retornando o melhor indivíduo encontrado, o que torna o método probabilística e não determinística, diferente de uma busca por exaustão. Desse modo, sendo possível resolver problemas de forma satisfatória, como os de NP-difícil que demandariam de muito custo computacional se fosse realizada a busca por exaustão. Portanto, os Algoritmos Genéticos nem sempre garantem que a resposta encontrada é a melhor solução possível ou que o caminho para chegar a tal resposta será o mesmo. </p>
 
