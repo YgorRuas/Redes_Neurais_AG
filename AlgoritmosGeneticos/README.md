@@ -1,8 +1,6 @@
 # Experimentos de otimização e algoritmos genéticos
 
-<p align="justify"> O presente repositório está em construção, então, alterações no decorrer do tempo estão sujeitas. </p>
-
-<p align="justify"> Aqui nesse README podemos encontrar a resolução de problemas de Algoritmos Genéticos. Para tal, a linguagem Jupyter Notebook é predominante nos códigos, mas também, é usada a linguagem de python principalmente em funcoes.py. Ademais, foi usado o Black para uma melhor formatação dos códigos. </p>
+<p align="justify"> Aqui nesse README podemos encontrar a resolução de problemas de Algoritmos Genéticos, Busca Aleatória e Busca em Grade, dando ênfase no primeiro. Para tal, a linguagem Jupyter Notebook é predominante nos códigos, mas também, é usada a linguagem de python principalmente em funcoes.py. Ademais, foi usado o Black para uma melhor formatação dos códigos. </p>
 
 ### A.01 - Busca Aleatória
 
@@ -18,6 +16,10 @@
 
 <p align="justify"> Algoritmos Genéticos consistem em uma classe de algoritmos de busca heurística inspirados no processo de seleção natural da evolução biológica, apoiando-se nas ideias de Darwin. Portanto, a ideia dos algoritmos genéticos é simular a evolução, assim, buscando o melhor individuo correlacionado a função objetivo de cada caso, normalmente, envolvendo uma maximização ou minimização. Assim, a evolução de uma população para solucionar os problemas envolvem técnicas como a utilizando de seleção, cruzamento e mutação. Desse modo, possuindo os critérios de parada, o presente método retornará o melhor individuo encontrado na função local, este que se não é o melhor individuo, normalmente é próximo do mesmo. Assim, sendo probabilístico, já que o memo caminho não será retornado no mesmo código. Por fim, são amplamente utilizados para resolver problemas de otimização em uma variedade de campos, incluindo matemática, engenharia, ciência da computação, economia, finanças, biologia entre outros. </p>
 
+<center>
+<img src='./MemeAG.png' style="width:900px;height:400px"/>
+</center>
+
 ## Instruções e especificações
 <p align="justify"> Os Algoritmos Genéticos sempre buscam uma otimização ou por meio de uma minimização ou por meio de uma maximização de uma função local. Assim, retornando o melhor indivíduo encontrado, o que torna o método probabilística e não determinística, diferente de uma busca por exaustão. Desse modo, sendo possível resolver problemas de forma satisfatória, como os de NP-difícil que demandariam de muito custo computacional se fosse realizada a busca por exaustão. Portanto, os Algoritmos Genéticos nem sempre garantem que a resposta encontrada é a melhor solução possível ou que o caminho para chegar a tal resposta será o mesmo. </p>
 
@@ -25,7 +27,7 @@ Também temos que a seção de `funcoes.py` serve para depositas as funções cr
 
 <p align="justify"> Para a formatação dos códigos foi usado o Black na sua versão online. </p>
 
-<p align="justify"> De modo que fique mais visual a função de cada termo usado durante os experimentos, tem-se o glossario abaixo:  </p>
+<p align="justify"> De modo que fique mais visual a função de cada termo usado durante os experimentos, tem-se o glossário abaixo:  </p>
 
 <details>
     
