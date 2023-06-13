@@ -2,6 +2,15 @@
 
 <p align="justify"> Nesse README podemos encontrar a resolução de problemas de Redes Neurais Artificiais. Para tal, a linguagem Jupyter Notebook é predominante nos códigos, mas também, é usada a linguagem de python principalmente em funcoes.py. Ademais, foi usado o Black para uma melhor formatação dos códigos. </p>
 
+## O que são Rdese Neurais?
+
+<p align="justify">  Redes neurais são algoritmos que se baseiam em um processamento de dados similar ao processamento de informações de um cérebro humano que ocorrem por meio de um conjunto extremamente complexo de células, os neurônios, estes que são responsáveis pela tomada de decisão do raciocínio e corpo humanos. Portanto, os neurônios são formados por dendritos, conjuntos de terminais de entrada, pelo corpo central, e pelos axônios, além dos terminais de saídas. </p>
+<p align="justify">  Desse modo, a comunicação dos neurônios ocorrem por meia da sinapse, região onde dois neurônios entram em contato e transmitem impulsos nervosos. Estabelecido o funcionamento biológico, assim, observa-se que o comportamento das redes neurais é similar ao de um neurônio visto que a estrutura computacional é baseada em um sistema três camdas, sendo um de input, dado pelo valor de entrada; a camada escondida e um neurônio que soma os valores de entrada recebidos e incrementa um viés; e por fim, o output, este sendo um valor de saída das operações. </p>
+
+<center>
+<img src='./Rededogcat.gif' style="width:900px;height:400px"/>
+</center>
+
 ### R.01 - Derivadas
 
 Esse material não possuí um desafio, mas sim, uma introdução a derivadas, sendo de extrema impotância no decorrer do repositório.
@@ -40,7 +49,7 @@ Em sequêmcia ao notebook anterior (**experimento R.07**), esse possúi o objeti
 
 ## Contribuições
 
-<p align="justify"> O presente git possuí como único autor [Ygor Ruas](https://github.com/YgorRuas/Redes_Neuro_Anais/tree/main), contudo, o arquivo advem da disciplina de Redes Neurais e Algoritmos Geneticos do Professor [Cassar. Daniel](https://github.com/drcassar/template_rnag), onde foI realizado uma ramificação para o desenvolvimento desse git. Além disso, como contribuições temos os alunos da primeira turma da ilum, estes que ajudaram de forma coletiva em parte da montagem e estruturação dos códigos. </p>
+O presente git possuí como único autor [Ygor Ruas](https://github.com/YgorRuas/Redes_Neuro_Anais/tree/main), contudo, o arquivo advem da disciplina de Redes Neurais e Algoritmos Geneticos do Professor [Cassar. Daniel](https://github.com/drcassar/template_rnag), onde foI realizado uma ramificação para o desenvolvimento desse git. Além disso, como contribuições temos os alunos da primeira turma da ilum, estes que ajudaram de forma coletiva em parte da montagem e estruturação dos códigos.
 
 ## Agradecimentos
 
