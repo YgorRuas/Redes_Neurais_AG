@@ -18,7 +18,7 @@
 <p align="justify">  Desse modo, o primeiro processo considerando os dados de entrada alimentados na rede e os valores de saída cálculados a partir da ativação dos neurônios durante a etapa de propagação para frente, é que os dados de entrada são alimentados na rede, já os de saídas são calculadas através das ativações dos neurônios, por sua vez, o segundo processo, determina que o erro entre as saídas da rede e os valores desejados, assim é propagado de volta para a rede. Ademais, os pesos das conexões são atualizados de forma a se obter um erro mínimo, utilizando o gradiente que é calculado através da derivada parcial do erro em relações aos pesos e são repetidos até que a rede forneça uma saída com um erro aceitável.  </p>
 
 <center>
-<img src='./Backprogation_Example.gif' style="width:900px;height:400px"/>
+<img src='./Backprogation_Example.gif' style="width:700px;height:400px"/>
 </center>
 
 ## Descrição dos experimentos
