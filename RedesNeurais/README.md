@@ -11,6 +11,18 @@
 <img src='./Rededogcat.gif' style="width:900px;height:400px"/>
 </center>
 
+### Backpropagation
+
+É um algoritmo muito utilizado em redes neurais devido o ajuste do peso das conexões entre os neurônios com o objetivo de minimizar o erro entre as saídas da rede e os valores desejados. Assim, o processo é dividido em duas etapas: propagação para frente `forward propagation` e retropropagação do erro `backward propagation`. 
+  
+<p align="justify">  Desse modo, o primeiro processo considerando os dados de entrada alimentados na rede e os valores de saída cálculados a partir da ativação dos neurônios durante a etapa de propagação para frente, é que os dados de entrada são alimentados na rede, já os de saídas são calculadas através das ativações dos neurônios, por sua vez, o segundo processo, determina que o erro entre as saídas da rede e os valores desejados, assim é propagado de volta para a rede. Ademais, os pesos das conexões são atualizados de forma a se obter um erro mínimo, utilizando o gradiente que é calculado através da derivada parcial do erro em relações aos pesos e são repetidos até que a rede forneça uma saída com um erro aceitável.  </p>
+
+<center>
+<img src='./Backprogation_Example.gif' style="width:900px;height:400px"/>
+</center>
+
+## Descrição dos experimentos
+
 ### R.01 - Derivadas
 
 Esse material não possuí um desafio, mas sim, uma introdução a derivadas, sendo de extrema impotância no decorrer do repositório.
