@@ -21,6 +21,7 @@
 </center>
 
 ## Instruções e especificações
+
 <p align="justify"> Os Algoritmos Genéticos sempre buscam uma otimização ou por meio de uma minimização ou por meio de uma maximização de uma função local. Assim, retornando o melhor indivíduo encontrado, o que torna o método probabilística e não determinística, diferente de uma busca por exaustão. Desse modo, sendo possível resolver problemas de forma satisfatória, como os de NP-difícil que demandariam de muito custo computacional se fosse realizada a busca por exaustão. Portanto, os Algoritmos Genéticos nem sempre garantem que a resposta encontrada é a melhor solução possível ou que o caminho para chegar a tal resposta será o mesmo. </p>
 
 Também temos que a seção de `funcoes.py` serve para depositas as funções criadas no decorrer dos experimentos, e está onde na linguagem de python. Assim sendo importadas durante os experimentos para que a resolução dos mesmos seja possível.

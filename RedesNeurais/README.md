@@ -13,13 +13,26 @@
 
 ### Backpropagation
 
-É um algoritmo muito utilizado em redes neurais devido o ajuste do peso das conexões entre os neurônios com o objetivo de minimizar o erro entre as saídas da rede e os valores desejados. Assim, o processo é dividido em duas etapas: propagação para frente `forward propagation` e retropropagação do erro `backward propagation`. 
+É um algoritmo muito utilizado em redes neurais devido o ajuste do peso das conexões entre os neurônios com o objetivo de minimizar o erro entre as saídas da rede e os valores desejados. Assim, o processo é dividido em duas etapas: propagação para frente `forward propagation` e retropropagação do erro `backwardpropagation`. 
   
 <p align="justify">  Desse modo, o primeiro processo considerando os dados de entrada alimentados na rede e os valores de saída cálculados a partir da ativação dos neurônios durante a etapa de propagação para frente, é que os dados de entrada são alimentados na rede, já os de saídas são calculadas através das ativações dos neurônios, por sua vez, o segundo processo, determina que o erro entre as saídas da rede e os valores desejados, assim é propagado de volta para a rede. Ademais, os pesos das conexões são atualizados de forma a se obter um erro mínimo, utilizando o gradiente que é calculado através da derivada parcial do erro em relações aos pesos e são repetidos até que a rede forneça uma saída com um erro aceitável.  </p>
 
 <center>
 <img src='./Backprogation_Example.gif' style="width:700px;height:400px"/>
 </center>
+
+## Arquivos
+
+<b> Arquivos .py</b>:
+
+<p style='text-align: justify'> 📂 <a href="https://github.com/YgorRuas/Redes_Neuro_Anais/blob/main/RedesNeurais/classes.py">classes.py</a> - Neste arquivo estão alocados todas as classes criadas com o objetivo de auxiliar na otimização do código..</p>
+
+<p style='text-align: justify'> 📂 <a href="https://github.com/YgorRuas/Redes_Neuro_Anais/blob/main/RedesNeurais/constantes.py">constantes.py</a> - Neste arquivo estão alocadas todas as constantes utilizadas nos códigos fonte para a resolução dos exercícios. É um ambiente destinado para guardar e armazenar as constantes de modo a otimizar o código.</p>
+
+<p style='text-align: justify'> 📁 <a href="https://github.com/YgorRuas/Redes_Neuro_Anais/blob/main/RedesNeurais/funcoes.py">funcoes.py</a> - Neste arquivo, serão armazenadas todas as funções sendo utilizadas ao longo do tempo nos experimentos/projetos. Com este arquivo, a reutilização de funções nos mais diversos arquivos da pasta será possibilitada, assim como a organização será evidenciada.</p>
+
+<p style='text-align: justify'> 📁 <a href="https://github.com/YgorRuas/Redes_Neuro_Anais/blob/main/RedesNeurais/README.md">README.md</a> - É o arquivo do readme, do repositório referente a Redes Neurais, onde fica o cartão de visita para essa seção do repositório.</p>
+
 
 ## Descrição dos experimentos
 
